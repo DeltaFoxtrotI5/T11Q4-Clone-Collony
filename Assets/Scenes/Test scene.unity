@@ -234,7 +234,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &315567052
@@ -428,7 +428,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &519324643
@@ -799,7 +799,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &742420048
@@ -1052,7 +1052,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cba1a17c8d3af47816cfdde8e29f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCam: {fileID: 0}
   boxVisual: {fileID: 1621547882}
+  selectionBox:
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  startPosition: {x: 0, y: 0}
+  endPosition: {x: 0, y: 0}
 --- !u!1 &1247062564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,11 +1104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a614989028fe3734d87b5c26462c3c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCam: {fileID: 0}
   clickable:
-    serializedVersion: 2
     m_Bits: 512
   ground:
-    serializedVersion: 2
     m_Bits: 1024
 --- !u!1 &1303809286
 GameObject:
@@ -1376,7 +1383,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1560340781
@@ -1633,7 +1640,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1660623292
@@ -1667,6 +1674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateScale: 1
   thrustScale: 2
+  rb2: {fileID: 0}
   flames: {fileID: 3071224850379977559, guid: ea49dca1011bb9b4e8122fb780908c09, type: 3}
   boid: {fileID: 1660623288}
   touch: {fileID: 850913820}
@@ -2043,7 +2051,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1868427095
@@ -2206,7 +2214,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2018413160
