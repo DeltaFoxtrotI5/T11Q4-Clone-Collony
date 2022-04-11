@@ -8,6 +8,6 @@ public class SceneS : MonoBehaviour
 
     public void OnButtonPress()
     {
-        SceneManager.LoadScene("TestB");
+        SceneManager.LoadScene("Test scene");
     }
 }
