@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Disable : MonoBehaviour
 {
-    public GameObject target;
-
+    public int rd;
     //void Start()
     //{
     //    sr = GetComponent<SpriteRenderer>();
@@ -13,13 +12,13 @@ public class Disable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Vector2.Distance(transform.position, target.transform.position) > 100.0f)
+       if (Vector2.Distance(transform.position, Camera.main.transform.position) > rd)
         {
-            this.gameObject.SetActive(false);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
         else
         {
-            this.gameObject.SetActive(true);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }
