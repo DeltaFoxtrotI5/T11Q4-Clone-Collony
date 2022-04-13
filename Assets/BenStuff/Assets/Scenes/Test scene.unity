@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateScale: 1
-  thrustScale: 8
+  thrustScale: 2
   flames: {fileID: 0}
   boid: {fileID: 1660623288}
   touch: {fileID: 850913820}
