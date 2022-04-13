@@ -41,7 +41,7 @@ public class BoidUnit : MonoBehaviour
         transform.up = direction;
 
         //MoveForward
-        rb2.AddForce(transform.up * thrustScale);
+        rb2.AddForce(transform.up * thrustScale * Time.deltaTime);
     }
 
 
