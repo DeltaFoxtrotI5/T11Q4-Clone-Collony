@@ -1311,7 +1311,7 @@ PrefabInstance:
     - target: {fileID: 2370136311022375763, guid: f62d8a11d8dedea4d85cc4d230b98b66,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2370136311022375763, guid: f62d8a11d8dedea4d85cc4d230b98b66,
         type: 3}
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateScale: 1
-  thrustScale: 2
+  thrustScale: 8
   flames: {fileID: 0}
   boid: {fileID: 1660623288}
   touch: {fileID: 850913820}
@@ -2408,7 +2408,7 @@ PrefabInstance:
     - target: {fileID: 4865183238967966816, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4865183238967966816, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
         type: 3}
@@ -2515,7 +2515,7 @@ PrefabInstance:
     - target: {fileID: 4865183238967966816, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4865183238967966816, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
         type: 3}
@@ -2788,7 +2788,7 @@ PrefabInstance:
     - target: {fileID: 4865183238967966816, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4865183238967966816, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
         type: 3}
