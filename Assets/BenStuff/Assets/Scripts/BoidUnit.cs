@@ -32,6 +32,7 @@ public class BoidUnit : MonoBehaviour
        // isSelected = true;
         isSelected = false;
         GameObject.Find("Counter").GetComponent<Score>().boidNumber++;
+        //GameObject.Find("Cm vcam1").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = this.transform;
     }
 
     //navigation to mouse////////////////////////////////////////
@@ -72,6 +73,16 @@ public class BoidUnit : MonoBehaviour
         
         //If unit is selected
         if(isSelected == true)
+        {
+            boid.transform.GetChild(0).gameObject.SetActive(true);
+
+        }
+        else
+        {
+            boid.transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+        if (isSelected == true)
         {
             boid.transform.GetChild(0).gameObject.SetActive(true);
         }
