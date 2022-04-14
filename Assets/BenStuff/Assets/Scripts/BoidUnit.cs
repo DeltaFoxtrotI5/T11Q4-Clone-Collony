@@ -20,6 +20,8 @@ public class BoidUnit : MonoBehaviour
     public int isFed;
     public AudioSource hey;
     public AudioSource hi;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class BoidUnit : MonoBehaviour
         rb2 = GetComponent<Rigidbody2D>();
        // isSelected = true;
         isSelected = false;
+        GameObject.Find("Counter").GetComponent<Score>().boidNumber++;
     }
 
     //navigation to mouse////////////////////////////////////////
@@ -98,7 +101,7 @@ public class BoidUnit : MonoBehaviour
         //    Instantiate(boid);
         //}
 
-        //outline
+        //Outline
         if (isFed > 0)
         {
             boid.transform.GetChild(1).gameObject.SetActive(true);
@@ -122,6 +125,7 @@ public class BoidUnit : MonoBehaviour
 
     }
 
+    //On Collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject cw = collision.gameObject;
