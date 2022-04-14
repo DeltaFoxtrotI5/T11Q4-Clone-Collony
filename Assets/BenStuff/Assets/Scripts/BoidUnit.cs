@@ -82,15 +82,6 @@ public class BoidUnit : MonoBehaviour
             boid.transform.GetChild(0).gameObject.SetActive(false);
         }
 
-        if (isSelected == true)
-        {
-            boid.transform.GetChild(0).gameObject.SetActive(true);
-        }
-        else
-        {
-            boid.transform.GetChild(0).gameObject.SetActive(false);
-        }
-
         ////Rotate
         //float rotation = rotateScale * Input.GetAxis("Horizontal");
         //transform.Rotate(new Vector3(0, 0, -rotation));
