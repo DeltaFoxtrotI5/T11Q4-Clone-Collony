@@ -20,6 +20,7 @@ public class BoidUnit : MonoBehaviour
     public int isFed;
     public AudioSource hey;
     public AudioSource hi;
+    public bool unlimitedPower;
     
 
     // Start is called before the first frame update
@@ -94,12 +95,15 @@ public class BoidUnit : MonoBehaviour
             Instantiate(boid);
         }
 
-        ////Unlimited Power
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    isFed--;
-        //    Instantiate(boid);
-        //}
+        //Unlimited Power
+        if (unlimitedPower == true)
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                Instantiate(boid);
+            }
+        }
+        
 
         //Outline
         if (isFed > 0)
@@ -155,8 +159,4 @@ public class BoidUnit : MonoBehaviour
             isFed++;
         }
     }
-
-
-    
-
 }

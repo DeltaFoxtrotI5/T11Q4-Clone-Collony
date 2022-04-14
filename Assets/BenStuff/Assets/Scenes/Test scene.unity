@@ -7520,6 +7520,7 @@ MonoBehaviour:
   isFed: 0
   hey: {fileID: 1110797866}
   hi: {fileID: 1870072156}
+  unlimitedPower: 0
 --- !u!96 &1660623295
 TrailRenderer:
   serializedVersion: 2
