@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class CloneAmount : MonoBehaviour
 {
-    public int boidNumber;
-
     // Start is called before the first frame update
     void Start()
     {
-        boidNumber = 0;
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length > 20)
+        {
+            // Do something
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (boidNumber == 50)
-        {
-            Debug.Log("Win");
-        }
+        
     }
 }
