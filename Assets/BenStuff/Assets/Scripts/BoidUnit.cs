@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class BoidUnit : MonoBehaviour
@@ -21,7 +22,7 @@ public class BoidUnit : MonoBehaviour
     public AudioSource hey;
     public AudioSource hi;
     public bool unlimitedPower;
-    
+    public int maxSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,8 @@ public class BoidUnit : MonoBehaviour
        // isSelected = true;
         isSelected = false;
         GameObject.Find("Counter").GetComponent<Score>().boidNumber++;
-        //GameObject.Find("Cm vcam1").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = this.transform;
+
+        //GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = this.transform;
     }
 
     //navigation to mouse////////////////////////////////////////
@@ -53,6 +55,12 @@ public class BoidUnit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //limity velocity magnitude
+        if(rb2.velocity.magnitude > maxSpeed)
+        {
+            rb2.velocity = Vector2.ClampMagnitude(rb2.velocity, maxSpeed);
+        }
+
         //Reset Rotation/Stabilize boids.
         if (Input.GetMouseButtonDown(0))
         {
@@ -70,11 +78,18 @@ public class BoidUnit : MonoBehaviour
         {
             followMouse();
         }
-        
-        //If unit is selected
 
-        ///boid Highlight
-        if(isSelected == true)
+        //If unit is selected
+        //if (isSelected == true)
+        //{
+        //    GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = this.transform;
+        //}
+        //else
+        //{
+        //    GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = null;
+        //}
+            ///boid Highlight
+            if (isSelected == true)
         {
             boid.transform.GetChild(0).gameObject.SetActive(true);
         }
