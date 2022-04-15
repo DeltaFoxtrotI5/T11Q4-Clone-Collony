@@ -13,7 +13,15 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(cursorPos.x, cursorPos.y);
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = new Vector2(cursorPos.x, cursorPos.y);
+        }
+        //else
+        //{
+        //    transform.position = new Vector2(GameObject.Find("BoidUnit").transform.position.x, GameObject.Find("BoidUnit").transform.position.y) ;
+        //}
+        
     }
 }

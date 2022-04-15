@@ -72,10 +72,11 @@ public class BoidUnit : MonoBehaviour
         }
         
         //If unit is selected
+
+        ///boid Highlight
         if(isSelected == true)
         {
             boid.transform.GetChild(0).gameObject.SetActive(true);
-
         }
         else
         {
@@ -145,6 +146,13 @@ public class BoidUnit : MonoBehaviour
             touch.Play();
             Instantiate(collide, boid.transform);
             Instantiate(collideSparks, boid.transform);
+        }
+
+        //Die on touch
+        if (collision.gameObject.name == "Death")
+        {
+            GameObject.Find("Counter").GetComponent<Score>().boidNumber--;
+            Destroy(this.gameObject);
         }
 
         //teamUp
