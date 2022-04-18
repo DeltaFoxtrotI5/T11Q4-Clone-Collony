@@ -23,6 +23,12 @@ public class BoidUnit : MonoBehaviour
     public AudioSource hi;
     public bool unlimitedPower;
     public int maxSpeed;
+    //Stop At Mouse
+    public bool sam;
+    //Slow Down At Mouse
+    public bool sdam;
+    //Divide number
+    public float sdamn;
 
     // Start is called before the first frame update
     void Start()
@@ -176,6 +182,22 @@ public class BoidUnit : MonoBehaviour
             hi.pitch = Random.Range(0.8f, 1.3f);
             hi.Play();
             isSelected = true;
+        }
+
+        //Reach Mouse
+        if (collision.gameObject.name.Contains("Mouse"))
+        {
+            //Slow Down At Mouse
+            if (sdam == true)
+            {
+                rb2.velocity = Vector2.one / sdamn;
+            }
+
+            //Stop At Mouse
+            if (sam == true)
+            {
+                rb2.velocity = Vector2.zero;
+            }
         }
 
         //Eat Food
