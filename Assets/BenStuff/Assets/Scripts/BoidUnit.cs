@@ -153,6 +153,15 @@ public class BoidUnit : MonoBehaviour
 
     }
 
+    //Ouch protocol
+    void Ouch()
+    {
+        touch.pitch = Random.Range(0.8f, 1.3f);
+        touch.Play();
+        Instantiate(collide, boid.transform);
+        Instantiate(collideSparks, boid.transform);
+    }
+
     //On Collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -163,10 +172,7 @@ public class BoidUnit : MonoBehaviour
         if (rb2.velocity.magnitude - cwrb.velocity.magnitude > ouchSpeed)
         {
             Debug.Log("Contact!!!");
-            touch.pitch = Random.Range(0.8f, 1.3f);
-            touch.Play();
-            Instantiate(collide, boid.transform);
-            Instantiate(collideSparks, boid.transform);
+            Ouch();
         }
 
         //Die on touch

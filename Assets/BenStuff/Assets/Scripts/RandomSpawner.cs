@@ -5,26 +5,31 @@ using UnityEngine;
 public class RandomSpawner : MonoBehaviour
 {
     public GameObject ItemPrefab;
-    public float OuterRadius = 100;
-
+    public float outerRadius = 100;
+    public int spawnnumber;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //Spawn
+        for(int i = 0; i < spawnnumber; i++)
+        {
+            SpawnObjectAtRandom();
+        }
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Spawn
-            SpawnObjectAtRandom();
+        
     }
 
     void SpawnObjectAtRandom()
     {
-        Vector3 randomPos = this.gameObject.transform.position * Random.insideUnitCircle * OuterRadius;
+        Vector3 randomPos = Random.insideUnitCircle * outerRadius;
 
         Instantiate(ItemPrefab, randomPos, Quaternion.identity);
     }
@@ -34,6 +39,6 @@ public class RandomSpawner : MonoBehaviour
     {
         Gizmos.color = Color.green;
 
-        Gizmos.DrawWireSphere(this.transform.position, OuterRadius);
+        Gizmos.DrawWireSphere(this.transform.position, outerRadius);
     }
 }

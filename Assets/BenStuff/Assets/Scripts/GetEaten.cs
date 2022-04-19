@@ -24,7 +24,7 @@ public class GetEaten : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Clone"))
         {
-            StartCoroutine(EatenCoroutine()); 
+            StartCoroutine(EatenCoroutine());
         }
     }
 
