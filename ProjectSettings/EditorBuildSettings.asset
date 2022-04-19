@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Second/MainMenu.unity
     guid: 6c1e677319a8ac1438a3d0a8e45d2c42
   - enabled: 1
+    path: Assets/Second/Tutorial/Tutorial.unity
+    guid: 6abda46bd5eb87b46b49442ca9cd011f
+  - enabled: 1
     path: Assets/BenStuff/Assets/Scenes/Test scene.unity
     guid: 8fcf69165ef11b14aad1b17e0bdbaf5d
   - enabled: 1
