@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BoidUnit : MonoBehaviour
 {
-
+    public AudioSource die;
     public float rotateScale;
     public float thrustScale;
     private Rigidbody2D rb2;
