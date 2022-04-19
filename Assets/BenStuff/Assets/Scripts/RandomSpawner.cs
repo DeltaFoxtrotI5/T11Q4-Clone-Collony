@@ -13,12 +13,11 @@ public class RandomSpawner : MonoBehaviour
     void Start()
     {
         //Spawn
-        for(int i = 0; i < spawnnumber; i++)
-        {
-            SpawnObjectAtRandom();
-        }
-        
 
+            for (int i = 0; i < spawnnumber; i++)
+            {
+                SpawnObjectAtRandom();
+            }
     }
 
     // Update is called once per frame

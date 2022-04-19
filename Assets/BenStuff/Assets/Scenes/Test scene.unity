@@ -7840,7 +7840,7 @@ MonoBehaviour:
   isFed: 0
   hey: {fileID: 1110797866}
   hi: {fileID: 1870072156}
-  unlimitedPower: 1
+  unlimitedPower: 0
   maxSpeed: 40
   sam: 0
   sdam: 0
