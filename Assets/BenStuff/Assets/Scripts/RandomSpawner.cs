@@ -14,16 +14,16 @@ public class RandomSpawner : MonoBehaviour
     {
         //Spawn
 
-            for (int i = 0; i < spawnnumber; i++)
-            {
-                SpawnObjectAtRandom();
-            }
+            //for (int i = 0; i < spawnnumber; i++)
+            //{
+            //    SpawnObjectAtRandom();
+            //}
     }
 
     // Update is called once per frame
     void Update()
     {
-        //SpawnObjectAtRandom();
+        SpawnObjectAtRandom();
     }
 
     void SpawnObjectAtRandom()

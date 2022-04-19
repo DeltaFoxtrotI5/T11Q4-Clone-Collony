@@ -342,5 +342,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minVal: 0.1
-  maxVal: 10
+  maxVal: 5
   rn: 0
