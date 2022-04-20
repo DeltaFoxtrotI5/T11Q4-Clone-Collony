@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 2370136311022375766}
   - component: {fileID: 2370136311022375761}
   - component: {fileID: 5794205930180224826}
+  - component: {fileID: 2509169038623439817}
   m_Layer: 0
   m_Name: Astroid
   m_TagString: Untagged
@@ -344,3 +345,19 @@ MonoBehaviour:
   minVal: 0.1
   maxVal: 5
   rn: 0
+--- !u!114 &2509169038623439817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370136311022375765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebbcccda254c8342b0247d9e03e7256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemPrefab: {fileID: 2370136311022375765}
+  outerRadius: 3
+  spawnnumber: 2
+  distanceflt: 50
