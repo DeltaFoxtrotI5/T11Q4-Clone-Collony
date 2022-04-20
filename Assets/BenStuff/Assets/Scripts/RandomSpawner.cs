@@ -9,13 +9,13 @@ public class RandomSpawner : MonoBehaviour
     public int spawnnumber;
     public float distanceflt;
     public int objectlimit = 100;
-    EverythingCounter spwn;
+    EverythingCounter asn;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        
+        GameObject.Find("Counter").GetComponent<EverythingCounter>().astroidsnum = asn;
 
         //Spawn
       for (int i = 0; i < spawnnumber; i++)
@@ -28,7 +28,7 @@ public class RandomSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && (spwn.astroidsnum < objectlimit))
+        if (Input.GetMouseButton(0) && asn.astroidsnum < objectlimit)
         {
             SpawnObjectAtRandom();
         }
