@@ -8,31 +8,35 @@ public class RandomSpawner : MonoBehaviour
     public float outerRadius = 100;
     public int spawnnumber;
     public float distanceflt;
-
+    public int objectlimit = 100;
+    EverythingCounter spwn;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        
+
         //Spawn
-        if (Vector2.Distance(transform.position, GameObject.Find("CM vcam1").transform.position) > distanceflt)
-        {
-            for (int i = 0; i < spawnnumber; i++)
-            {
-                SpawnObjectAtRandom();
-            }
-        }
+      for (int i = 0; i < spawnnumber; i++)
+      {
+          SpawnObjectAtRandom();
+      }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //SpawnObjectAtRandom();
+        if (Input.GetMouseButton(0) && (spwn.astroidsnum < objectlimit))
+        {
+            SpawnObjectAtRandom();
+        }
     }
 
     void SpawnObjectAtRandom()
     {
-        Vector3 randomPos = Random.insideUnitCircle * outerRadius;
+        Vector2 randomPos = new Vector2(transform.position.x, transform.position.y) + Random.insideUnitCircle * outerRadius;
 
         Instantiate(ItemPrefab, randomPos, Quaternion.identity);
     }

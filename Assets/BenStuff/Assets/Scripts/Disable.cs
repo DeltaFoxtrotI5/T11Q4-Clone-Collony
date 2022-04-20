@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Disable : MonoBehaviour
 {
-    public int rd;
+    public int rd = 30;
+    public int dd = 200;
     //void Start()
     //{
     //    sr = GetComponent<SpriteRenderer>();

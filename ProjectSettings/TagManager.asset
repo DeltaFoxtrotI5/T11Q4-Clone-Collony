@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Clone
+  - Obstacle/Don'tCollidewthis
+  - Food
+  - Astroid
   layers:
   - Default
   - TransparentFX

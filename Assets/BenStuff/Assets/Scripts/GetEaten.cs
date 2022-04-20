@@ -8,7 +8,7 @@ public class GetEaten : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject.Find("Counter").GetComponent<EverythingCounter>().foodnum++;
     }
 
     IEnumerator EatenCoroutine()
@@ -17,7 +17,8 @@ public class GetEaten : MonoBehaviour
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
         gameObject.transform.GetChild(1).gameObject.SetActive(false);
         foodPoint.Play();
-        yield return new WaitForSeconds(5);
+        GameObject.Find("Counter").GetComponent<EverythingCounter>().foodnum--;
+        yield return new WaitForSeconds(2);
         Destroy(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)

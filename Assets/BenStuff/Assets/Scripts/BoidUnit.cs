@@ -38,6 +38,7 @@ public class BoidUnit : MonoBehaviour
         rb2 = GetComponent<Rigidbody2D>();
        // isSelected = true;
         isSelected = false;
+        isFed = 0;
         GameObject.Find("Counter").GetComponent<Score>().boidNumber++;
 
         //GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = this.transform;
@@ -153,6 +154,11 @@ public class BoidUnit : MonoBehaviour
 
     }
 
+    public void Killob()
+    {
+        Destroy(this.gameObject);
+    }
+
     //Ouch protocol
     void Ouch()
     {
@@ -160,6 +166,7 @@ public class BoidUnit : MonoBehaviour
         touch.Play();
         Instantiate(collide, boid.transform);
         Instantiate(collideSparks, boid.transform);
+        Invoke("Killob", 1);
     }
 
     //On Collision

@@ -94,7 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7aef410c215824eb47daebb6f0aac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: 50
+  rd: 30
+  dd: 200
 --- !u!1 &2370136311022375765
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +111,8 @@ GameObject:
   - component: {fileID: 2370136311022375766}
   - component: {fileID: 2370136311022375761}
   - component: {fileID: 5794205930180224826}
-  - component: {fileID: 2509169038623439817}
+  - component: {fileID: 8409452164663208025}
+  - component: {fileID: 1048170096592102579}
   m_Layer: 0
   m_Name: Astroid
   m_TagString: Untagged
@@ -329,7 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7aef410c215824eb47daebb6f0aac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: 50
+  rd: 30
+  dd: 100
 --- !u!114 &5794205930180224826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ MonoBehaviour:
   minVal: 0.1
   maxVal: 5
   rn: 0
---- !u!114 &2509169038623439817
+--- !u!114 &8409452164663208025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,10 +357,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2370136311022375765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ebbcccda254c8342b0247d9e03e7256, type: 3}
+  m_Script: {fileID: 11500000, guid: e618626383cee0545b2cb6846bfef275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemPrefab: {fileID: 2370136311022375765}
-  outerRadius: 3
-  spawnnumber: 2
-  distanceflt: 50
+  time: 30
+--- !u!114 &1048170096592102579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370136311022375765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc231b68c3d9a84586ba626add8ceeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
