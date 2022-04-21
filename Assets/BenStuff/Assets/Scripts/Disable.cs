@@ -13,13 +13,18 @@ public class Disable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Vector2.Distance(transform.position, Camera.main.transform.position) > rd)
+       //if (Vector2.Distance(transform.position, Camera.main.transform.position) > rd)
+       // {
+       //     this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+       // }
+       // else
+       // {
+       //     this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+       // }
+
+        if (Vector2.Distance(transform.position, Camera.main.transform.position) > dd)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        }
-        else
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            Destroy(this.gameObject);
         }
     }
 }

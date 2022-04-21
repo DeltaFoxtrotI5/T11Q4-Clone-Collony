@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7351264938772979443}
   - component: {fileID: 735172846552060959}
-  - component: {fileID: 8186985305747116485}
+  - component: {fileID: -705680311205630770}
   m_Layer: 0
   m_Name: LevelPart_1
   m_TagString: Untagged
@@ -47,9 +47,10 @@ MonoBehaviour:
   ItemPrefab: {fileID: 2370136311022375765, guid: f62d8a11d8dedea4d85cc4d230b98b66,
     type: 3}
   outerRadius: 42.5
-  spawnnumber: 20
+  spawnnumber: 1
   distanceflt: 0
---- !u!114 &8186985305747116485
+  objectlimit: 1
+--- !u!114 &-705680311205630770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,8 +62,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebbcccda254c8342b0247d9e03e7256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemPrefab: {fileID: 4865183238967966831, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
+  ItemPrefab: {fileID: 2438638409221224882, guid: 940d1b578a2c4114aa2cf5a5fb8ec231,
     type: 3}
   outerRadius: 42.5
-  spawnnumber: 1
+  spawnnumber: 0
   distanceflt: 0
+  objectlimit: 1

@@ -8,30 +8,29 @@ public class RandomSpawner : MonoBehaviour
     public float outerRadius = 100;
     public int spawnnumber;
     public float distanceflt;
-    public int objectlimit = 100;
-    EverythingCounter asn;
+    public int objectlimit = 2;
+    private int asn;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        GameObject.Find("Counter").GetComponent<EverythingCounter>().astroidsnum = asn;
-
-        //Spawn
-      for (int i = 0; i < spawnnumber; i++)
-      {
-          SpawnObjectAtRandom();
-      }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && asn.astroidsnum < objectlimit)
+        //Spawn
+        if (GameObject.Find("Counter").GetComponent<EverythingCounter>().astroidsnum < 100)
         {
-            SpawnObjectAtRandom();
+            Invoke("SpawnTime", 1);
         }
+            
+    }
+
+    void SpawnTime()
+    {
+        SpawnObjectAtRandom();
     }
 
     void SpawnObjectAtRandom()

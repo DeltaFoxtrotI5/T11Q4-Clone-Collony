@@ -13,9 +13,6 @@ public class GetEaten : MonoBehaviour
 
     IEnumerator EatenCoroutine()
     {
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        gameObject.transform.GetChild(1).gameObject.SetActive(false);
         foodPoint.Play();
         GameObject.Find("Counter").GetComponent<EverythingCounter>().foodnum--;
         yield return new WaitForSeconds(2);
@@ -25,6 +22,8 @@ public class GetEaten : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Clone"))
         {
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             StartCoroutine(EatenCoroutine());
         }
     }

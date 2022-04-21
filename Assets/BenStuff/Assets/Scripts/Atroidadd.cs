@@ -11,8 +11,8 @@ public class Atroidadd : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
+        GameObject.Find("Counter").GetComponent<EverythingCounter>().astroidsnum--;
     }
 }
