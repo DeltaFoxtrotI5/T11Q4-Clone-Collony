@@ -219,4 +219,9 @@ public class BoidUnit : MonoBehaviour
             isFed++;
         }
     }
+
+    private void OnDestroy()
+    {
+        GameObject.Find("Counter").GetComponent<Score>().boidNumber--;
+    }
 }
