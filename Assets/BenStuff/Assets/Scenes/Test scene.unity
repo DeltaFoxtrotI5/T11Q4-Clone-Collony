@@ -690,7 +690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 363.6, y: -235.61}
+  m_AnchoredPosition: {x: 251.1, y: -191.5}
   m_SizeDelta: {x: 27.150696, y: 18.211899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547403093
@@ -6100,8 +6100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 397.2, y: -235.61}
-  m_SizeDelta: {x: 27.150696, y: 18.211899}
+  m_AnchoredPosition: {x: 292.8, y: -191.5}
+  m_SizeDelta: {x: 29.800781, y: 18.211899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713214874
 MonoBehaviour:
@@ -6277,7 +6277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310.5, y: -231.5}
+  m_AnchoredPosition: {x: -234.5, y: -188.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828999559
@@ -6845,7 +6845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310.5, y: -201.5}
+  m_AnchoredPosition: {x: -234.5, y: -173.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201983335
@@ -8152,7 +8152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329, y: -191.5}
+  m_AnchoredPosition: {x: -255.8, y: -163.2}
   m_SizeDelta: {x: 35.053925, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770721057
@@ -8594,7 +8594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380.4, y: -235.61}
+  m_AnchoredPosition: {x: 276.8, y: -191.5}
   m_SizeDelta: {x: 6.440918, y: 18.211899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901744825
