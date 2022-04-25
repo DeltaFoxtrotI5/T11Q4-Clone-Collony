@@ -40,7 +40,8 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         followMouse();
-        if (this.gameObject.GetComponent<EnemyScript>().target == null)
+
+        if (target == null)
         {
             GetNewTarget();
         }

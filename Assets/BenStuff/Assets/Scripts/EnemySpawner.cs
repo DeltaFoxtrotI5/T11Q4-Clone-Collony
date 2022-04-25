@@ -29,8 +29,6 @@ public class EnemySpawner : MonoBehaviour
             time = 0.0f;
 
             SpawnObjectAtRandom();
-            SpawnObjectAtRandom();
-            SpawnObjectAtRandom();
         }
     }
 
