@@ -183,10 +183,9 @@ public class BoidUnit : MonoBehaviour
         }
 
         //Die on touch
-        if (collision.gameObject.name == "Death")
+        if (collision.gameObject.tag == "Enemy")
         {
-            GameObject.Find("Counter").GetComponent<Score>().boidNumber--;
-            Destroy(this.gameObject);
+            Ouch();
         }
 
         //teamUp
