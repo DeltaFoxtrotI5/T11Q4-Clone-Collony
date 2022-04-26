@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public AudioSource action;
     private float time = 0.0f;
     public float interpolationPeriod = 0.1f;
     public GameObject ItemPrefab;
@@ -16,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
             if (GameObject.Find("Counter").GetComponent<Score>().boidNumber > 1)
             {
                 SpawnObjectAtRandom();
+                //action.Play();
             }
         }
     }
