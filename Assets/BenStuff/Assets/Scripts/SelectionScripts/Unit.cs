@@ -7,11 +7,13 @@ public class Unit : MonoBehaviour
     void Start()
     {
         UnitSelections.Instance.unitList.Add(this.gameObject);
+        Score.boidNumber++;
     }
 
     void OnDestroy()
     {
         UnitSelections.Instance.unitList.Remove(this.gameObject);
         UnitSelections.Instance.unitsSelected.Remove(this.gameObject);
+        Score.boidNumber--;
     }
 }

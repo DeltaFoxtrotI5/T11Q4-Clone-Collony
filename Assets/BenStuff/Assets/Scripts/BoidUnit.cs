@@ -39,8 +39,6 @@ public class BoidUnit : MonoBehaviour
        // isSelected = true;
         isSelected = false;
         isFed = 0;
-        GameObject.Find("Counter").GetComponent<Score>().boidNumber++;
-
         //GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = this.transform;
     }
 
@@ -166,15 +164,64 @@ public class BoidUnit : MonoBehaviour
         touch.Play();
         Instantiate(collide, boid.transform);
         Instantiate(collideSparks, boid.transform);
-        Invoke("Killob", 1);
+        Invoke("Killob", .5f);
     }
 
     //On Collision
-    private void OnTriggerEnter2D(Collider2D collision)
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    GameObject cw = collision.gameObject;
+    //    Rigidbody2D cwrb = cw.GetComponent<Rigidbody2D>();
+
+    //    //Collision Effects/Ouch
+    //    if (rb2.velocity.magnitude - cwrb.velocity.magnitude > ouchSpeed)
+    //    {
+    //        Debug.Log("Contact!!!");
+    //        Ouch();
+    //    }
+
+    //    //Die on touch
+    //    if (collision.gameObject.tag == "Enemy")
+    //    {
+    //        Ouch();
+    //    }
+
+    //    //teamUp
+    //    if (collision.gameObject.tag.Equals("Clone") && collision.gameObject.GetComponent<BoidUnit>().isSelected == true && isSelected == false)
+    //    {
+    //        hi.pitch = Random.Range(0.8f, 1.3f);
+    //        hi.Play();
+    //        isSelected = true;
+    //    }
+
+    //    //Reach Mouse
+    //    if (collision.gameObject.name.Contains("Mouse"))
+    //    {
+    //        //Slow Down At Mouse
+    //        if (sdam == true)
+    //        {
+    //            rb2.velocity = Vector2.one / sdamn;
+    //        }
+
+    //        //Stop At Mouse
+    //        if (sam == true)
+    //        {
+    //            rb2.velocity = Vector2.zero;
+    //        }
+    //    }
+
+    //    //Eat Food
+    //    if (collision.gameObject.tag.Equals("Food"))
+    //    {
+    //        isFed++;
+    //    }
+    //}
+
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject cw = collision.gameObject;
         Rigidbody2D cwrb = cw.GetComponent<Rigidbody2D>();
-        
+
         //Collision Effects/Ouch
         if (rb2.velocity.magnitude - cwrb.velocity.magnitude > ouchSpeed)
         {
@@ -217,10 +264,5 @@ public class BoidUnit : MonoBehaviour
         {
             isFed++;
         }
-    }
-
-    private void OnDestroy()
-    {
-        GameObject.Find("Counter").GetComponent<Score>().boidNumber--;
     }
 }

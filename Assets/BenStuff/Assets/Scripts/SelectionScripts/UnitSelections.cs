@@ -32,6 +32,11 @@ public class UnitSelections : MonoBehaviour
         {
             DeselectAll();
         }
+
+        if(unitList == null)
+        {
+            Score.boidNumber = 0;
+        }
     }
 
     public void ClickSelect(GameObject unitToAdd)
