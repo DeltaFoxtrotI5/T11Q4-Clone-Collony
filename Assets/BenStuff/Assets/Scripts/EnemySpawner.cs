@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         if (time >= interpolationPeriod)
         {
             time = 0.0f;
-            if (GameObject.Find("Counter").GetComponent<Score>().boidNumber > 1)
+            if (Score.boidNumber > 1)
             {
                 SpawnObjectAtRandom();
                 //action.Play();
