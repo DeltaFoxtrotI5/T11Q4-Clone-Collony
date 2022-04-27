@@ -97,6 +97,7 @@ public class BoidUnit : MonoBehaviour
             if (isSelected == true)
         {
             boid.transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>().Follow = this.transform;
         }
         else
         {
