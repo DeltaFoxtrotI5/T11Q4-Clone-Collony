@@ -33,10 +33,10 @@ public class BoidUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         //Get RigidBody 2D
         rb2 = GetComponent<Rigidbody2D>();
-       // isSelected = true;
+        // isSelected = true;
         isSelected = false;
         isFed = 0;
         //GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = this.transform;
@@ -60,8 +60,14 @@ public class BoidUnit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Score.boidNumber == Score.targetscore)
+        {
+            this.gameObject.SetActive(false);
+        }
+
         //limity velocity magnitude
-        if(rb2.velocity.magnitude > maxSpeed)
+        if (rb2.velocity.magnitude > maxSpeed)
         {
             rb2.velocity = Vector2.ClampMagnitude(rb2.velocity, maxSpeed);
         }
@@ -93,8 +99,8 @@ public class BoidUnit : MonoBehaviour
         //{
         //    GameObject.Find("Cm vcam1").GetComponent<CinemachineVirtualCamera>().Follow = null;
         //}
-            ///boid Highlight
-            if (isSelected == true)
+        ///boid Highlight
+        if (isSelected == true)
         {
             boid.transform.GetChild(0).gameObject.SetActive(true);
         }
@@ -126,7 +132,7 @@ public class BoidUnit : MonoBehaviour
                 Instantiate(boid);
             }
         }
-        
+
 
         //Outline
         if (isFed > 0)
